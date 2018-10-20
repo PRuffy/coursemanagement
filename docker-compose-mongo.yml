@@ -7,8 +7,7 @@ services:
           - MONGO_DATA_DIR=/data/db
           - MONGO_LOG_DIR=/data/log
         volumes:
-          - ./src/main/resources/data/db:/data/db
-          - ./src/main/resources/data/log:/data/log
+          - ./src/main/resources/data:/data
         ports:
             - 27017:27017
         command: mongod --smallfiles --logpath=/data/log # --quiet
